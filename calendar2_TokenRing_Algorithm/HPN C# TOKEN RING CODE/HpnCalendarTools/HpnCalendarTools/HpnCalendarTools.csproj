@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0359E8F2-14BA-42CB-803F-7486856C7DB6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hpn</RootNamespace>
+    <AssemblyName>HpnCalendarTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>hpn.main.HpnCalendarTools</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="hpn\calendar\Calendar.cs" />
+    <Compile Include="hpn\calendar\ListOrder.cs" />
+    <Compile Include="hpn\calendar\SequentialNumber.cs" />
+    <Compile Include="hpn\cs\xml\client\CalendarNetwork.cs" />
+    <Compile Include="hpn\cs\xml\client\HostsList.cs" />
+    <Compile Include="hpn\cs\xml\client\HostUrl.cs" />
+    <Compile Include="hpn\cs\xml\client\HpnClientFunctionality.cs" />
+    <Compile Include="hpn\cs\xml\client\HpnXmlRpcClient.cs" />
+    <Compile Include="hpn\dataStructures\queue\IPriorityQueue.cs" />
+    <Compile Include="hpn\dataStructures\queue\PriorityQueue.cs" />
+    <Compile Include="hpn\mutualExclusion\tokenRing\TokenRing.cs" />
+    <Compile Include="hpn\mutualExclusion\tokenRing\TokenRingClient.cs" />
+    <Compile Include="hpn\mutualExclusion\tokenRing\TokenRingQueue.cs" />
+    <Compile Include="hpn\settings\DateString.cs" />
+    <Compile Include="hpn\settings\DefaultPort.cs" />
+    <Compile Include="hpn\cs\xml\webserver\HpnXmlRpcServer.cs" />
+    <Compile Include="hpn\cs\xml\webserver\ServerStatus.cs" />
+    <Compile Include="hpn\main\HpnCalendarTools.cs" />
+    <Compile Include="hpn\calendar\Appointment.cs" />
+    <Compile Include="hpn\calendar\CalendarTools.cs" />
+    <Compile Include="hpn\console\file\FileIO.cs" />
+    <Compile Include="hpn\console\scanner\Reader.cs" />
+    <Compile Include="hpn\numbers\Date.cs" />
+    <Compile Include="hpn\numbers\Integer.cs" />
+    <Compile Include="hpn\settings\MachinIdentification.cs" />
+    <Compile Include="lib\nwc\xmlrpc\Logger.cs" />
+    <Compile Include="lib\nwc\xmlrpc\SimpleHttpRequest.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcBoxcarRequest.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcClientProxy.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcDeserializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcErrorCodes.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcException.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcExposedAttribute.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcRequest.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcRequestDeserializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcRequestSerializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcResponder.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcResponse.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcResponseDeserializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcResponseSerializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcSerializer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcServer.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcSystemObject.cs" />
+    <Compile Include="lib\nwc\xmlrpc\XmlRpcXmlTokens.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
